@@ -1,17 +1,15 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
+-- Made By: aw_not
 
 local HackersHub = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local title = Instance.new("TextLabel")
 local close = Instance.new("TextButton")
 local ChariotsWare = Instance.new("TextButton")
+local C00lkid = Instance.new("TextButton")
 local openmain = Instance.new("Frame")
 local open = Instance.new("TextButton")
 
---Properties:
+
 
 HackersHub.Name = "HackersHub"
 HackersHub.Parent = game.CoreGui
@@ -66,6 +64,21 @@ ChariotsWare.TextSize = 14.000
 ChariotsWare.TextWrapped = true
 ChariotsWare.MouseButton1Down:connect(function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Rippeed/DaHoodinary/main/chariotsware"))()
+end)
+
+C00lkid.Name = "C00lkid"
+C00lkid.Parent = main
+C00lkid.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+C00lkid.Position = UDim2.new(0, 0, 0.240740746, 0)
+C00lkid.Size = UDim2.new(0, 200, 0, 50)
+C00lkid.Font = Enum.Font.SourceSans
+C00lkid.Text = "C00lkid Gui"
+C00lkid.TextColor3 = Color3.fromRGB(255, 255, 255)
+C00lkid.TextScaled = true
+C00lkid.TextSize = 14.000
+C00lkid.TextWrapped = true
+C00lkid.MouseButton1Down:connect(function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/AwNot/Login/main/C00lkid"))()
 end)
 
 openmain.Name = "openmain"
