@@ -1,0 +1,92 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local HackersHub = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local title = Instance.new("TextLabel")
+local close = Instance.new("TextButton")
+local ChariotsWare = Instance.new("TextButton")
+local openmain = Instance.new("Frame")
+local open = Instance.new("TextButton")
+
+--Properties:
+
+HackersHub.Name = "HackersHub"
+HackersHub.Parent = game.CoreGui
+HackersHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = HackersHub
+main.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+main.Position = UDim2.new(0.137348652, 0, 0.1819392, 0)
+main.Size = UDim2.new(0, 989, 0, 486)
+main.Visible = false
+main.Active = true
+main.Draggable = true
+
+title.Name = "title"
+title.Parent = main
+title.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+title.Size = UDim2.new(0, 933, 0, 50)
+title.Font = Enum.Font.SourceSans
+title.Text = "Hackers Hub"
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.TextScaled = true
+title.TextSize = 14.000
+title.TextWrapped = true
+
+close.Name = "close"
+close.Parent = main
+close.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+close.Position = UDim2.new(0.943377078, 0, 0, 0)
+close.Size = UDim2.new(0, 56, 0, 50)
+close.Font = Enum.Font.SourceSans
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(255, 255, 255)
+close.TextScaled = true
+close.TextSize = 14.000
+close.TextWrapped = true
+close.MouseButton1Down:connect(function()
+main.Visible = false
+openmain.Visible = true
+end)
+
+ChariotsWare.Name = "ChariotsWare"
+ChariotsWare.Parent = main
+ChariotsWare.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+ChariotsWare.Position = UDim2.new(0, 0, 0.115226328, 0)
+ChariotsWare.Size = UDim2.new(0, 200, 0, 50)
+ChariotsWare.Font = Enum.Font.SourceSans
+ChariotsWare.Text = "Chariots Ware"
+ChariotsWare.TextColor3 = Color3.fromRGB(255, 255, 255)
+ChariotsWare.TextScaled = true
+ChariotsWare.TextSize = 14.000
+ChariotsWare.TextWrapped = true
+ChariotsWare.MouseButton1Down:connect(function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Rippeed/DaHoodinary/main/chariotsware"))()
+end)
+
+openmain.Name = "openmain"
+openmain.Parent = HackersHub
+openmain.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+openmain.Position = UDim2.new(0, 0, 0.402631581, 0)
+openmain.Size = UDim2.new(0, 50, 0, 50)
+openmain.Active = true
+openmain.Draggable = true
+
+open.Name = "open"
+open.Parent = openmain
+open.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+open.Size = UDim2.new(0, 50, 0, 50)
+open.Font = Enum.Font.SourceSans
+open.Text = "H"
+open.TextColor3 = Color3.fromRGB(255, 255, 255)
+open.TextScaled = true
+open.TextSize = 14.000
+open.TextWrapped = true
+open.MouseButton1Down:connect(function()
+openmain.Visible = false
+main.Visible = true
+end)
