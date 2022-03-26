@@ -1,4 +1,7 @@
--- Made By: aw_not
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
 
 local HackersHub = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
@@ -6,10 +9,11 @@ local title = Instance.new("TextLabel")
 local close = Instance.new("TextButton")
 local ChariotsWare = Instance.new("TextButton")
 local C00lkid = Instance.new("TextButton")
+local SoftVortex = Instance.new("TextButton")
 local openmain = Instance.new("Frame")
 local open = Instance.new("TextButton")
 
-
+--Properties:
 
 HackersHub.Name = "HackersHub"
 HackersHub.Parent = game.CoreGui
@@ -79,6 +83,21 @@ C00lkid.TextSize = 14.000
 C00lkid.TextWrapped = true
 C00lkid.MouseButton1Down:connect(function()
 	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/AwNot/Login/main/C00lkid"))()
+end)
+
+SoftVortex.Name = "SoftVortex"
+SoftVortex.Parent = main
+SoftVortex.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+SoftVortex.Position = UDim2.new(0, 0, 0.370370358, 0)
+SoftVortex.Size = UDim2.new(0, 200, 0, 50)
+SoftVortex.Font = Enum.Font.SourceSans
+SoftVortex.Text = "SoftVortex"
+SoftVortex.TextColor3 = Color3.fromRGB(255, 255, 255)
+SoftVortex.TextScaled = true
+SoftVortex.TextSize = 14.000
+SoftVortex.TextWrapped = true
+SoftVortex.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/SoftVortex/1.5/main/1.55"),true))()
 end)
 
 openmain.Name = "openmain"
